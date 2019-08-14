@@ -57,6 +57,7 @@
                 <order_status>pending</order_status>
                 <model>payfort/pay</model>
                 <title>PayPayfort Payment Method</title>
+                <sha_type>SHA-512</sha_type>
                 <payment_action>sale</payment_action>
                 <allowspecific>0</allowspecific>
                 <sort_order>1</sort_order>

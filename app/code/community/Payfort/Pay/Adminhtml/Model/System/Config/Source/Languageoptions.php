@@ -12,6 +12,7 @@ class Payfort_Pay_Adminhtml_Model_System_Config_Source_Languageoptions {
         return array(
             array('value' => 'en_US', 'label' => Mage::helper('adminhtml')->__('en_US')),
             array('value' => 'ar_SA', 'label' => Mage::helper('adminhtml')->__('ar_SA')),
+            array('value' => 'no_language', 'label' => Mage::helper('adminhtml')->__('Use store locale')),
         );
     }
 
