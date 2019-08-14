@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+    </default>
+    <payfort_payment_redirect>
+    	<remove name="header"/>
+		<remove name="footer"/>
+    	<!-- <remove name="content"/> -->
+        <reference name="root">
+            <action method="setTemplate"><template>payfort/layout.phtml</template></action>
+        </reference>
+        <reference name="head"></reference>
+        <reference name="content"></reference>
+    </payfort_payment_redirect>
+
+    <payfort_payment_response>
+    	<remove name="header"/>
+		<remove name="footer"/>
+    	<!-- <remove name="content"/> -->
+        <reference name="head"></reference>
+        <reference name="root">
+            <action method="setTemplate"><template>payfort/layout.phtml</template></action>
+        </reference>
+        <reference name="content"></reference>
+    </payfort_payment_response>
+
+</layout>
