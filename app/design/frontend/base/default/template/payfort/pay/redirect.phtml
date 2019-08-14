@@ -15,6 +15,12 @@ $total = round($_order->getBaseGrandTotal(), 2);
 
 $language = Mage::getStoreConfig('payment/payfort/language');
 $currency = Mage::getStoreConfig('payment/payfort/currency');
+$sandbox_mode = Mage::getStoreConfig('payment/payfort/sandbox_mode');
+
+$gateway_post_URL = 'https://secure.payfort.com/ncol/prod/orderstandard.asp';
+
+if($sandbox_mode)
+	$gateway_post_URL = 'https://secure.payfort.com/ncol/test/orderstandard.asp';
 
 if($language == 'no_language') {
 	$language = Mage::app()->getLocale()->getLocaleCode();
@@ -72,7 +78,7 @@ foreach ($items as $item) {
 <div class="center wrapper">
 	<div id="logo" class="center"></div>
 	<p class="center title"><?php echo $this->__('Redirecting to Payfort ...') ?></p>
-	<form name="payfortpaymentform" id="payfortpaymentform" method="post" action="https://secure.payfort.com/ncol/test/orderstandard.asp" id="form1" name="form1">
+	<form name="payfortpaymentform" id="payfortpaymentform" method="post" action="<?php echo $gateway_post_URL; ?>" id="form1" name="form1">
 		<!-- general parameters -->
 		<input type="hidden" name="PSPID" value="<?php echo $merchant_affiliation_name ?>">
 		<input type="hidden" name="ORDERID" value="<?php echo $orderId ?>">
