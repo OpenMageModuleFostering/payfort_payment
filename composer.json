@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/payfort_payment",
+    "name": "openmage-module-fostering\/payfort_payment",
     "type": "magento-module",
-    "license": "OSL",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "This extension will allow your customers to use Payfort payment gateway.",
     "authors": [
