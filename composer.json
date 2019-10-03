@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/payfort_payment",
+    "name": "OpenMageModuleFostering\/payfort_payment",
     "type": "magento-module",
     "license": "OSL",
     "homepage": "",
     "description": "This extension will allow your customers to use Payfort payment gateway.",
     "authors": [
-    {
-        "name": "ShopGo",
-        "email": "support@shopgo.me"
-    }
-],
+        {
+            "name": "ShopGo",
+            "email": "support@shopgo.me"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
